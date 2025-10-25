@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DTC GOAT Custom Styles */
+@layer base {
+  :root {
+    --color-primary: theme('colors.dtc-primary');
+    --color-secondary: theme('colors.dtc-secondary');
+    --color-accent: theme('colors.dtc-accent');
+  }
+}
+
+@layer components {
+  .dtc-header {
+    @apply bg-dtc-primary text-white shadow-lg;
+  }
+  
+  .dtc-button {
+    @apply bg-dtc-primary hover:bg-dtc-accent text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .dtc-card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  .dtc-badge {
+    @apply inline-block bg-dtc-secondary text-white text-xs font-bold px-2 py-1 rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-dtc-gradient {
+    @apply bg-gradient-to-r from-dtc-primary to-dtc-accent bg-clip-text text-transparent;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "dtc-goat-theme",
+  "version": "1.0.0",
+  "description": "DTC GOAT custom theme with Tailwind CSS and Alpine.js",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "npm run build:css && npm run build:js",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify",
+    "build:js": "esbuild ./src/app.js --bundle --minify --outfile=./dist/app.js",
+    "watch": "npm run watch:css & npm run watch:js",
+    "watch:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+    "watch:js": "esbuild ./src/app.js --bundle --watch --outfile=./dist/app.js"
+  },
+  "keywords": [
+    "flarum",
+    "theme",
+    "tailwind",
+    "alpine"
+  ],
+  "author": "DTC GOAT",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "esbuild": "^0.25.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.0"
+  }
+}

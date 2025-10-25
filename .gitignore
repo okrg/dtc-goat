@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+.vagrant
+config.php
+.idea
+vendor
+server
+core
+studio.json
+composer.lock
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Build artifacts
+themes/*/dist/
